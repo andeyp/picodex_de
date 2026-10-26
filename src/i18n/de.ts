@@ -58,7 +58,7 @@ export const de = {
     unsupported:
       "Dein Browser kann keine Ordner auf deinem Computer öffnen, PicoDex braucht das, um die SD-Karte zu lesen. Öffne diese Seite in einem Chromium-basierten Broser (Chrome, Edge, Opera) an einem Desktop oder Laptop.",
     waitingForFolder: 'Warte auf Ordner…',
-    whatsNewButton: "Was ist neu in PicoDex",
+    whatsNewButton: "Was ist neu in PicoDex?",
     features: {
       boxArtTitle: 'Box Art',
       boxArtBody: 'Findet Spiele ohne Cover und ruft Cover für Pico Launcher ab.',
@@ -79,13 +79,13 @@ export const de = {
     },
   },
   sd: {
-    scanningLibrary: 'Scanning game library…',
-    scanningLibraryCount: (count: number) => `Scanning game library… ${count} files`,
-    readingCovers: 'Reading covers…',
-    readingLauncherData: 'Reading launcher data…',
-    waitingAccess: 'Waiting for access to the card…',
+    scanningLibrary: 'Scanne Spielebibliothek…',
+    scanningLibraryCount: (count: number) => `Scanne Spielebibliothek… ${count} Dateien`,
+    readingCovers: 'Lese Cover…',
+    readingLauncherData: 'Lese Launcher-Daten…',
+    waitingAccess: 'Warte auf Zugriff der Karte…',
     needsAccess: (name: string) =>
-      `PicoDex needs your permission to open ${name}. Press Open ${name} again and allow access when your browser asks.`,
+      `PicoDex benötigt die Erlaubnis, um ${name} zu öffnen. Klicke "${name} öffnen" nochmal und erteile die Erlaubnis, wenn der Browser dich dazu auffordert.`,
     noPicoAnymore:
       "PicoDex can't find the /_pico folder on that card. If the card isn't connected, connect it first. Then press Open SD card and choose it.",
     noPicoPickRoot:
@@ -670,4 +670,4 @@ export const de = {
 };
 
 /** The contract every language file must satisfy. */
-export type Dict = typeof en;
+export type Dict = typeof de;
