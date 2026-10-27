@@ -32,7 +32,7 @@ export const de = {
     openSdFolder: 'Die geöffnete SD-Karte',
     reload: 'Neu laden',
     reloading: 'Lädt neu…',
-    whatsNew: "Was ist neu",
+    whatsNew: "Was ist neu? (EN)",
     footerLicense: 'Open source (MIT) · no tracking',
     language: 'Sprache',
     /** Label and tooltip of the repository card in the header. */
@@ -87,73 +87,73 @@ export const de = {
     needsAccess: (name: string) =>
       `PicoDex benötigt die Erlaubnis, um ${name} zu öffnen. Klicke "${name} öffnen" nochmal und erteile die Erlaubnis, wenn der Browser dich dazu auffordert.`,
     noPicoAnymore:
-      "PicoDex can't find the /_pico folder on that card. If the card isn't connected, connect it first. Then press Open SD card and choose it.",
+      "PicoDex kann nicht den /_pico Ordner auf der SD-Karte finden. Wenn die SD-Karte nicht verbunden ist, stecke sie (erneut) ein. Drücke danach auf SD-Karte öffnen und wähle den Speicherort",
     noPicoPickRoot:
-      "PicoDex can't find a /_pico folder there. Choose the root of the SD card, not a folder inside it. If you already did, Pico Launcher isn't set up on this card yet.",
+      "PicoDex kann hier keinen /_pico Ordner finden. Wähle das Stammverzeichnis (root) der SD-Karte, nicht einen Ordner darin. Wenn du das bereits getan hast, wurde PicoLauncher noch nicht eingerichtet",
     noPicoOnCard:
-      "PicoDex couldn't save your change because it can't find the /_pico folder on the card any more. Check that the card is still connected, then press Reload.",
+      "PicoDex kann die Änderungen nicht speichern, weil es den /_pico Ordner nicht mehr finden kann. Prüfe, ob die SD-Karte noch verbunden ist und drücke anschließend auf Neu laden.",
     fsDenied:
-      'Your computer blocked PicoDex from a file or folder on the card. Usually this means the card is locked or read-only. Check the lock switch on the side of the SD card or its adapter, unlock it if needed, then reconnect the card and press Reload.',
+      'Dein Computer blockiert die Bearbeitung von PicoDex. Normalerweise heißt das, dass der Schreibschutz der Karte oder der Dateien darin aktiviert wurde. Überprüfe den LOCK Schieber der SD-Karte (Adapter) und versuche es nochmal.',
     fsNotFound:
-      "PicoDex can't find the card, or a file on it, any more. Check that the card is still connected, then press Reload.",
+      "PicoDex kann die SD-Karte ode reine Datei nicht mehr finden. Prüfe, ob die SD-Karte noch verbunden ist und drücke anschließend auf Neu laden.",
   },
   errors: {
-    rateLimited: 'GitHub is limiting box art searches for now. Try again in an hour.',
+    rateLimited: 'GitHub limitiert im Moment die Suche nach Box Art. Versuche es in einer Stunde erneut.',
     rateLimitedUntil: (time: string) =>
-      `GitHub is limiting box art searches until ${time}. Try again after that.`,
+      `GitHub limitiert im Moment die Suche nach Box Art bis ${time}. Versuche es danach erneut.`,
     catalogFailed: (status: number) =>
-      `GitHub couldn't send the list of box art (error ${status}). Try again in a few minutes.`,
+      `GitHub kann nicht die Liste der Box Art bereitstellen: (error ${status}). Versuche es in ein paar Minuten erneut.`,
     catalogUnreadable:
-      "GitHub's answer didn't contain the list of box art. Try again in a few minutes.",
+      "GitHub kann die Liste der Box Art lesen. Versuche es in ein paar Minuten erneut.",
     imageDownloadFailed: (status: number): string =>
       status === 404
-        ? "This box art isn't available any more."
-        : `The box art couldn't be downloaded (error ${status}). Try again in a few minutes.`,
-    imageUnreadable: "PicoDex can't read this picture.",
-    canvasFailed: "Your browser couldn't draw the picture. Reload the page and try again.",
-    offline: "PicoDex couldn't reach GitHub. Check your internet connection and try again.",
+        ? "Diese Box Art ist leider nicht mehr verfügbar :( ."
+        : `Das Box Art konnte nicht heruntergeladen werden: (error ${status}). Versuche es in ein paar Minuten erneut.`,
+    imageUnreadable: "PicoDex kann dieses Bild nicht verarbeiten.",
+    canvasFailed: "Dein Browser kann dieses Bild nicht darstellen. Lade die Seite neu und versuche es erneut.",
+    offline: "PicoDex kann GitHub nicht erreichen. Prüfe deine Internet-Einstellungen und versuche es erneut.",
   },
   associations: {
-    title: 'File associations',
-    openCard: 'Open an SD card to edit file associations.',
-    // Sentences that wrap a <code> element are split in parts; the JSX joins them.
-    noSettings1: 'No ',
-    noSettings2: ' found — run Pico Launcher once on your flashcart so it creates ',
-    noSettings3: ', then press Reload.',
-    settingsInvalid1: 'PicoDex found ',
+    title: 'Dateizuordnungen',
+    openCard: 'Öffne eine SD-Karteum die Dateizuordnungen zu bearbeiten.',
+    // Sätze, die ein <code> Element enthalten, werden in Teile geschnitten; das (der/die ??) JSX setzt sie wieder zusammen.
+    noSettings1: 'Kein ',
+    noSettings2: ' gefunden — starte Pico Launcher mindestens einmal, um  ',
+    noSettings3: ', zu erzeugen, danach drücke auf Neu Laden.',
+    settingsInvalid1: 'PicoDex gefunden ',
     settingsInvalid2:
-      " but can't read it: it is not a valid settings file. Don't start Pico Launcher until it is fixed: if the launcher can't read it either, it replaces it with a default one and your file associations would be lost. Open it in a text editor and look for a missing comma, quote or bracket near the place below, or put back a copy you saved. Then press Reload.",
-    settingsBom1: 'PicoDex found ',
+      " aber es kann nicht gelesen werden: Es ist keine gültige Konfigurationsdatei. Starte Pico Launcher nicht, bis es repariert wurde: wenn es der Launcher auch nicht lesen kann, wird es mit Standardeinstellungen erstellt und deine eigenen Zuordnungen gingen verloren. Öffne es in einem Text Editor (Editor, Notepad++, nano etc) und schau nach einem fehlendem Komma, Hochkomma oder Klammer in der Nähe des angegebenen Ortes. Alternativ ersetze die Datei mit einer vorher angelegten Kopie. Drücke dann auf Neu Laden.",
+    settingsBom1: 'PicoDex gefunden  ',
     settingsBom2:
-      ", but it starts with a byte order mark (BOM), an invisible mark some editors add when saving. The launcher can't read a file that starts with it and would replace it with a default one, and your file associations would be lost. Don't start Pico Launcher yet: open the file in a text editor, save it as UTF-8 without BOM, then press Reload.",
-    settingsNotObject1: 'PicoDex found ',
+      ", aber es startet mit einem byte order mark (BOM), ein unsichtbares Zeichen, das manche Editoren während dem Speichern hinzufügen. Der Launcher kann diese Datei nicht lesen und würde es mit Standardeinstellungen ersetzen und deine eigenen Zuordnungen gingen verloren. Starte Pico Launcher noch nicht: Öffne die Datei in einem anderen Editor (Notepad++) und speichere es im Zeichenformat UTF-8 ohne BOM ab, danach drücke auf Neu Laden.",
+    settingsNotObject1: 'PicoDex gefunden  ',
     settingsNotObject2:
-      ', but it does not hold settings: its content is not a JSON object, so there are no file associations to show. Replace its content with {} or delete the file, then press Reload.',
-    settingsUnreadable1: 'PicoDex found ',
+      ', aber es enthält keine Daten: Der Inhalt ist kein JSON Object, also gibt es keine Zuordnung. Ersetze den Ihnalt mit {} oder lösche die Datei, danach drücke auf Neu Laden.',
+    settingsUnreadable1: 'PicoDex gefunden  ',
     settingsUnreadable2:
-      " but couldn't open it. Another program may be using it, or the card may have a problem. Don't start Pico Launcher until PicoDex can open it: if the launcher can't read it either, it replaces it with a default one and your file associations would be lost. Close any program that is using the card, then press Reload.",
+      " aber es kann nicht gelesen werden. Ein anderes Programm greift möglicherweis enoch darauf zu, oder die SD-Karte hat ein Problem. Starte nicht Pico Launcher, bis PicoDex es öffnen kann: Wenn der Launcher es nicht lesen kann, werden Standardeinstellungen verwendet und deine eigenen Zuordnungen gingen verloren. Schliese alle Anwendungen/Programme, die Zugriff auf die SD-Karte haben könnten und drücke danach auf Neu Laden.",
     settingsDetail: 'Details: ',
     notRead:
-      "PicoDex could not finish reading this card, so it can't tell whether settings.json is there. Fix the problem shown above, then press Reload.",
-    intro1: 'Choose which application the launcher opens for each file extension. Stored in ',
+      "PicoDex kann die Datei nicht zu Ende lesen - es weiß nicht, ob settings.json existiert. Löse das oben angezeigte Problem und drücke danach auf Neu Laden.",
+    intro1: 'Wähle aus, welche Anwendung der Launcher öffnet, basierend auf der Datei-Endung. Inhalt gespeichert in ',
     intro2: '.',
-    emptyList: 'No file associations yet — add one below.',
-    extension: 'Extension',
-    appPath: 'Application path',
-    actions: 'Actions',
-    pathFor: (ext: string) => `Application path for .${ext} files`,
-    removeFor: (ext: string) => `Remove .${ext} association`,
-    remove: 'Remove',
-    add: 'Add',
-    invalidExt: 'Type the letters of the extension, for example nes.',
-    hint: 'Enter the extension without the dot. Common emulator paths: ',
+    emptyList: 'Noch keine Dateizuordnung vorhanden — füge unten eine neue hinzu.',
+    extension: 'Datei-Endung',
+    appPath: 'Pfad der Anwendung',
+    actions: 'Aktion',
+    pathFor: (ext: string) => `Anwendungspfad für .${ext} Dateien`,
+    removeFor: (ext: string) => `entferne .${ext} zuordnung`,
+    remove: 'Entfernen',
+    add: 'Verknüpfen',
+    invalidExt: 'Gebe die Buchstaben der Endung ein, z.b. nes.',
+    hint: 'Gebe die Endung ohne Punkt ein. Hier sind die Emulatoren meist gespeichert: ',
     picoMissing:
-      "Nothing was saved: PicoDex can't find the /_pico folder on the card any more. Check that the card is still connected, press Reload and save again.",
+      "Es wurde nichts gespeichert: PicoDex kann den Ordner /_pico nicht mehr finden. Prüfe, ob die Karte noch eingesteckt ist, speichere und lade neu.",
     restartWarning: 'Once saved, your changes apply the next time Pico Launcher starts on your DS.',
-    emptyPaths: 'Application paths cannot be empty. Fill in or remove the blank rows.',
-    discard: 'Discard changes',
-    saveToSd: 'Save to SD',
-    saving: 'Saving…',
+    emptyPaths: 'Der Anwendungspfad kann nicht leer sein. Schreibe etwas rein oder lösche den leeren Eintrag.',
+    discard: 'Änderungen verwerfen',
+    saveToSd: 'Speichere auf SD',
+    saving: 'Speichervorgang…',
   },
   statsEditor: {
     dialogLabel: (game: string) => `Bearbeite Spielstatistiken für ${game}`,
@@ -603,7 +603,7 @@ export const de = {
     optional2: ' — fine to leave out.',
     savesTitle: 'Orphaned saves',
     savesSkipped:
-      "Not checked: PicoDex found no games on the card, so it can't tell which saves belong to a game.",
+      "Not checked: PicoDex gefunden  no games on the card, so it can't tell which saves belong to a game.",
     savesAllOk: 'Every save file belongs to a game on the card.',
     savesOrphans: (count: number) =>
       count === 1
@@ -620,7 +620,7 @@ export const de = {
       `Confirm permanently delete ${count} save ${count === 1 ? 'file' : 'files'}?`,
     coversTitle: 'Orphaned user covers',
     coversSkipped:
-      "Not checked: PicoDex found no games on the card, so it can't tell which covers belong to a game.",
+      "Not checked: PicoDex gefunden  no games on the card, so it can't tell which covers belong to a game.",
     coversAllOk: 'Every user cover belongs to a game on the card.',
     coversOrphans1: (count: number) => (count === 1 ? '1 cover in ' : `${count} covers in `),
     coversOrphans2: (count: number): string =>
